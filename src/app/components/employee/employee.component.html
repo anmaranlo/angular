@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="row">
+        <!-- <div class="col s5">
+            <div class="card">
+                <div class="card-content">
+                    <form #employeeForm="ngForm" (ngSubmit)="addEmployee(employeeForm)">
+                        <input type="hidden" formControlName="id">
+                        <div class="row">
+                            <div class="input-field col-s12">
+                                <input type="number" formControlName="documento">
+                            </div>
+                            <!-- <div class="input-field col-s12">
+                                <input type="text" name="nombres" #nombres="ngModel" [(ngModel)]="employeeService.selectedEmployee.nombres">
+                            </div>
+                            <div class="input-field col-s12">
+                                <input type="text" name="fecha_inicio" #fecha_inicio="ngModel" [(ngModel)]="employeeService.selectedEmployee.fecha_inicio">
+                            </div>
+                            <div class="input-field col-s12">
+                                <input type="text" name="fecha_fin" #fecha_fin="ngModel" [(ngModel)]="employeeService.selectedEmployee.fecha_fin">
+                            </div>
+                            <div class="input-field col-s12">
+                                <input type="text" name="inicio_turno" #inicio_turno="ngModel" [(ngModel)]="employeeService.selectedEmployee.inicio_turno">
+                            </div>
+                            <div class="input-field col-s12">
+                                <input type="text" name="fin_turno" #fin_turno="ngModel" [(ngModel)]="employeeService.selectedEmployee.fin_turno">
+                            </div>
+                            <div class="input-field col-s12">
+                                <input type="text" name="inicio_extra" #inicio_extra="ngModel" [(ngModel)]="employeeService.selectedEmployee.inicio_extra">
+                            </div>
+                            <div class="input-field col-s12">
+                                <input type="text" name="fin_extra" #fin_extra="ngModel" [(ngModel)]="employeeService.selectedEmployee.fin_extra">
+                            </div>
+                            <div class="input-field col-s12">
+                                <input type="text" name="motivo_extra" #motivo_extra="ngModel" [(ngModel)]="employeeService.selectedEmployee.motivo_extra">
+                            </div> -->
+                            <!-- <div class="card-action">
+                                <div class="input-field col-s12">
+                                    <button class="btn right" style="margin-left: 2px" (click)="resetForm(employeeForm)">Limpiar</button>
+                                    <button class="btn right">Guardar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> -->
+        <div class="col s7">
+            <table class="striped highlight black-text">
+                <thead>
+                    <th>documento</th>
+                    <th>Nombres</th>
+                    <th>Fecha Inicio Periodo</th>
+                    <th>Fecha Fin Periodo</th>
+                    <th>Hora Inicio Turno</th>
+                    <th>Hora Fin Turno</th>
+                    <th>Hora Inicio Horas Extras</th>
+                    <th>Hora Fin Horas Extras</th>
+                    <th>Motivo Horas Extra</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let employee of employee">
+                        <td>{{ employee.documento }}</td>
+                        <td>{{ employee.nombres }}</td>
+                        <td>{{ employee.fecha_inicio }}</td>
+                        <td>{{ employee.fecha_fin }}</td>
+                        <td>{{ employee.inicio_turno }}</td>
+                        <td>{{ employee.fin_turno }}</td>
+                        <td>{{ employee.inicio_extra }}</td>
+                        <td>{{ employee.fin_extra }}</td>
+                        <td>{{ employee.motivo_extra }}</td>
+                        <!-- <td>
+                            <a (click)="editEmployee(employee)"><i class="material-icons">edit</i></a>
+                            <a (click)="deleteEmployee(employee.id)"><i class="material-icons">delete</i></a>
+                        </td> -->
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
